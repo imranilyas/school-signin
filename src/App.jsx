@@ -5,19 +5,28 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import ListComponent from "./components/ListComponent";
+import Login from "./routes/Login";
+import Protected from "./routes/Protected";
+import AttendanceForm from "./routes/AttendanceForm";
 
 function App() {
 	const router = createBrowserRouter([
 		{
 			path: "/",
-			element: <ListComponent />,
+			element: <Login />,
+		},
+		{
+			path: "/sign-in",
+			element: (
+				<Protected>
+					<AttendanceForm />
+				</Protected>
+			),
 		},
 	]);
 
 	return (
 		<>
-			{/* <ListComponent /> */}
 			<div>
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />

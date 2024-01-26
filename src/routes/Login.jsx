@@ -1,10 +1,17 @@
 import React from "react";
 
 const Login = () => {
+	const submitHandler = (element) => {
+		element.preventDefault();
+		console.log("Submit");
+	};
+
 	return (
-		<div>
+		<form onSubmit={submitHandler}>
 			<input placeholder="Username" type="text" />
-		</div>
+			<input placeholder="Password" type="password" />
+			<input type="submit" value={"Login"} />
+		</form>
 	);
 };
 
