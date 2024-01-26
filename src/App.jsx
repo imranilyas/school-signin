@@ -1,15 +1,23 @@
-import { useState } from "react";
+import React from "react";
+import * as ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ListComponent from "./components/ListComponent";
 
 function App() {
-	const [count, setCount] = useState(0);
+	const router = createBrowserRouter([
+		{
+			path: "/",
+			element: <ListComponent />,
+		},
+	]);
 
 	return (
 		<>
-			<ListComponent />
+			{/* <ListComponent /> */}
 			<div>
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
@@ -22,18 +30,7 @@ function App() {
 					/>
 				</a>
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more and other stuff
-			</p>
+			<RouterProvider router={router} />
 		</>
 	);
 }
