@@ -27,7 +27,7 @@ function App() {
 
 	return (
 		<>
-			<div>
+			{/* <div>
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
 				</a>
@@ -38,7 +38,7 @@ function App() {
 						alt="React logo"
 					/>
 				</a>
-			</div>
+			</div> */}
 			<RouterProvider router={router} />
 		</>
 	);
