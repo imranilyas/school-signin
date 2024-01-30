@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
 const Protected = ({ children }) => {
-	let authorized = true;
+	const authorized = useSelector((state) => state.login.authorized);
+
 	if (authorized) {
 		return children;
 	} else {
