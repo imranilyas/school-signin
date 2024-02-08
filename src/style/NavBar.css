@@ -1,7 +1,20 @@
-.navbar {
-	/* position: fixed; */
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: gray;
+.navbar-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: aqua;
+}
+
+.nav-header {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.nav-link {
+	display: flex;
+	justify-content: right;
+}
+
+#btn {
+	background-color: aqua;
+	color: black;
 }
