@@ -17,7 +17,6 @@ const ItemComponent = ({ student, toList }) => {
 			className="student"
 			style={{
 				backgroundColor: clickItem && "rgb(124, 255, 124, 0.6)",
-				// opacity: clickItem && 0.5,
 			}}
 		>
 			{/* <div style={{ backgroundColor: clickItem && "blue" }}> */}
