@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ListComponent from "../components/ListComponent";
 import NavBar from "../components/NavBar";
 import Filter from "../components/Filter";
+import GradeArrayComponent from "../components/GradeArrayComponent";
 
 const AttendanceForm = () => {
 	let list = [
@@ -36,7 +37,7 @@ const AttendanceForm = () => {
 		<div style={{ display: "flex", flexDirection: "column" }}>
 			<NavBar />
 			<Filter />
-			<ListComponent list={list} />
+			<GradeArrayComponent list={list} />
 		</div>
 	);
 };
