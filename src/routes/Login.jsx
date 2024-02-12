@@ -25,23 +25,35 @@ const Login = () => {
 	};
 
 	return (
-		<form onSubmit={submitHandler} className="loginForm">
-			<input
-				placeholder="Username"
-				type="text"
-				value={username}
-				onChange={(e) => setUsername(e.target.value)}
-				className="loginInput"
-			/>
-			<input
-				placeholder="Password"
-				type="password"
-				value={password}
-				onChange={(e) => setPassword(e.target.value)}
-				className="loginInput"
-			/>
-			<input type="submit" value={"Login"} className="loginInput" />
-		</form>
+		// <div
+		// 	style={{
+		// 		display: "flex",
+		// 		justifyContent: "center",
+		// 		// alignContent: "center",
+		// 		// alignSelf: "center",
+		// 		backgroundColor: "#000000",
+		// 		alignItems: "center",
+		// 	}}
+		// >
+		<div className="formContainer">
+			<form onSubmit={submitHandler} className="loginForm">
+				<input
+					placeholder="Username"
+					type="text"
+					value={username}
+					onChange={(e) => setUsername(e.target.value)}
+					className="loginInput"
+				/>
+				<input
+					placeholder="Password"
+					type="password"
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+					className="loginInput"
+				/>
+				<input type="submit" value={"Login"} className="loginInput" />
+			</form>
+		</div>
 	);
 };
 
