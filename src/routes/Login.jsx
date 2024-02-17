@@ -25,16 +25,6 @@ const Login = () => {
 	};
 
 	return (
-		// <div
-		// 	style={{
-		// 		display: "flex",
-		// 		justifyContent: "center",
-		// 		// alignContent: "center",
-		// 		// alignSelf: "center",
-		// 		backgroundColor: "#000000",
-		// 		alignItems: "center",
-		// 	}}
-		// >
 		<div className="formContainer">
 			<form onSubmit={submitHandler} className="loginForm">
 				<input

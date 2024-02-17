@@ -19,8 +19,9 @@ const ItemComponent = ({ student, toList }) => {
 				backgroundColor: clickItem && "rgb(124, 255, 124, 0.6)",
 			}}
 		>
+			<div className="tagged"></div>
 			{/* <div style={{ backgroundColor: clickItem && "blue" }}> */}
-			{student.firstName + " " + student.lastName}
+			<p>{student.firstName + " " + student.lastName}</p>
 			{/* </div> */}
 		</div>
 	);

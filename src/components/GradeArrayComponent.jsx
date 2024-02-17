@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ListComponent from "./ListComponent";
+import Modal from "./Modal";
 
 const GradeArrayComponent = ({ list }) => {
 	let grade12 = list.filter((student) => student.grade < 3);
@@ -12,6 +13,7 @@ const GradeArrayComponent = ({ list }) => {
 	let grade78 = list.filter((student) => student.grade > 6);
 
 	const [selected, setSelected] = useState([]);
+	const [openModal, setOpenModal] = useState(false);
 
 	const addRemoveHandler = (student) => {
 		if (selected.findIndex((s) => s === student) === -1) {
@@ -23,6 +25,10 @@ const GradeArrayComponent = ({ list }) => {
 
 	const printList = () => {
 		console.log(selected);
+	};
+
+	const openModalHandler = () => {
+		setOpenModal(true);
 	};
 
 	return (
@@ -48,6 +54,8 @@ const GradeArrayComponent = ({ list }) => {
 				grade={"7-8"}
 			/>
 			<button onClick={printList}>Print</button>
+			<button onClick={openModalHandler}>Submit</button>
+			{openModal && <Modal closeModal={() => setOpenModal(false)} />}
 		</>
 	);
 };

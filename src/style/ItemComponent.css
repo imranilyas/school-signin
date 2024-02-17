@@ -1,8 +1,9 @@
 .student {
+	display: flex;
+	flex-direction: row;
 	cursor: pointer;
-	margin: 2px;
+	margin: 30px;
 	margin-bottom: 20px;
-	padding: 10px;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background-color: beige;
@@ -15,4 +16,10 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.37),
 		0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background-color: rgb(196, 196, 178);
+}
+
+.tagged {
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: aquamarine;
 }
