@@ -9,7 +9,7 @@ const Modal = ({ closeModal }) => {
 					<button onClick={closeModal}>X</button>
 				</div>
 				<div className="modalTitle">
-					<h1>Are you sure you would like to continue?</h1>
+					<h1>Are you sure you want to continue?</h1>
 				</div>
 
 				<div className="modalBody">
